@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Score Dashboard</title>
+</head>
+<body>
+    <h1>Game Dashboard</h1>
+    <hr>
+    <h3>Available Actions</h3>
+    <form action="/run" method="GET">
+        <input type="number" name="id" placeholder="Enter Player ID">
+        <input type="hidden" name="btn" value="1">
+        <input type="submit" value="Search Player">
+    </form>
+    <br>
+    <a href="/run?btn=2">[ Show High Scores ]</a> |
+    <a href="/run?btn=3">[ Tournament Results ]</a> |
+    <a href="/run?btn=4">[ Recent Scores ]</a> |
+    <a href="/run?btn=5">[ Undo Last Game ]</a> |
+    <a href="/run?btn=6">[ Process Queue ]</a>
+    <hr>
+    <h3>Results:</h3>
+    <pre style="border:1px solid black; padding:10px;">{{RESULT}}</pre>
+    <p><small>All actions are saved in results.txt</small></p>
+</body>
+</html>
